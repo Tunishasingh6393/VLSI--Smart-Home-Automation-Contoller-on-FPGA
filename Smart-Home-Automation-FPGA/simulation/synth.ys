@@ -1,0 +1,27 @@
+# =========================================================================
+# Yosys RTL Synthesis Script (Vivid course project gate optimization)
+# =========================================================================
+
+# Read input verilog files
+read_verilog ../rtl/clk_en.v
+read_verilog ../rtl/debounce.v
+read_verilog ../rtl/pwm8.v
+read_verilog ../rtl/scenes.v
+read_verilog ../rtl/ctrl_fsm.v
+read_verilog ../rtl/uart_rx.v
+read_verilog ../rtl/top.v
+
+# Parse design hierarchy structure
+hierarchy -top top
+
+# Run optimization compiler passes
+proc; opt; fsm; opt; memory; opt
+
+# Synthesize gate-level netlist targeting Artix-7 library architectures
+synth_xilinx -flatten -top top
+
+# Write out generic synthesis statistics report
+stat
+
+# Export structural mapped gate-level schematic JSON format
+write_json top_schematic.json

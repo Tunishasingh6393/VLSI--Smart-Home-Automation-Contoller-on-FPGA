@@ -1,0 +1,8 @@
+{
+  "name": "Smart Home Automation FPGA Controller Suite",
+  "description": "An interactive digital design sandbox, Verilog RTL suite, interactive waveform testbench simulator, and comprehensive documentation report generator for a student's Smart Home Automation Controller on FPGA course project.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

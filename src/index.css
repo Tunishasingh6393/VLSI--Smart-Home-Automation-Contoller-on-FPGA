@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;750&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom glow animations for interactive circuit simulation */
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6)); }
+  50% { filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.9)); }
+}
+
+@keyframes fanSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-glow-amber {
+  animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+.spin-slow {
+  animation: fanSpin 4s infinite linear;
+}
+
+.spin-medium {
+  animation: fanSpin 1.5s infinite linear;
+}
+
+.spin-fast {
+  animation: fanSpin 0.5s infinite linear;
+}
+
+/* Custom scrollbars for clean code viewer and waveform logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+

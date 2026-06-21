@@ -1,0 +1,42 @@
+# =========================================================================
+# Smart Home FPGA Project Gitignore File
+# =========================================================================
+
+# Compiled/Generated Bitstream Files
+*.bit
+*.bin
+*.mcs
+*.prm
+
+# Vivado / ISE Tooling Artifacts & Directories
+work/
+xsim.dir/
+.Xil/
+.cache/
+xrun.log
+xrun.key
+webtalk_*.xml
+webtalk_*.log
+vivado_*.str
+vivado_*.log
+vivado_*.jou
+vivado_pid*.str
+hls_*.log
+
+# Simulation Waveform & Trace Outputs
+*.vcd
+*.wdb
+xsim.jou
+xsim.log
+
+# Synthesis schematic / Netlist Outputs
+*_schematic.json
+*.gate.v
+*.netlist
+
+# OS / Editor specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
